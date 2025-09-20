@@ -32,35 +32,6 @@ CSV_PATH = "./PS_2025.09.20_08.00.03.csv"
 
 df = pd.read_csv(CSV_PATH, comment="#", low_memory=False)
 
-
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-        color: white;
-    }
-    label, .css-1cpxqw2 {
-        color: white !important;
-    }
-    .stButton > button {
-        color: #262730; 
-        background-color: white;
-        border: #262730;
-    }
-    .stButton > button:hover {
-        background-color: white !important;
-        color: #FF4B4B !important;
-        border-color: #FF4B4B !important;
-        box-shadow: 0 0 0 2px #FF4B4B !important;
-    }
-    
-    </style>
-""",
-    unsafe_allow_html=True,
-)
-
-
 columns = [
     "pl_name", "hostname", "pl_orbsmax", "pl_orbper",
     "st_teff", "st_rad", "st_mass", "sy_dist",
