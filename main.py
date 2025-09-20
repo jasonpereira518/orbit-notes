@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import numpy as np
 import streamlit as st
-from dotenv import load_dotenv
 from langchain.agents import Tool, initialize_agent
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import FAISS
@@ -11,9 +10,8 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.schema import SystemMessage, HumanMessage
 from PIL import Image
 
-load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets["API_KEY"]
 if not OPENAI_API_KEY:
     st.error("OPENAI_API_KEY missing. Add it to your .env")
     st.stop()
