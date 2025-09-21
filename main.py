@@ -4,8 +4,6 @@ import numpy as np
 import streamlit as st
 from dotenv import load_dotenv
 from langchain.agents import Tool, initialize_agent
-from langchain.docstore.document import Document
-from langchain_community.vectorstores import FAISS
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.schema import SystemMessage, HumanMessage
